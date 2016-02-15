@@ -10,9 +10,17 @@
 \maketitle
 
 \oppgave{1 (i)}
-For the radicand of $f$ to be zero or greater, $y^2 \ge 0$ for any $y$, while
-$x$ is limited by $x(x-6) \ge 0$.  Therefore the domain $\mathcal{D}_f$ is
-given by $x \le 0$ or $x \ge 6$.
+
+The radicand must be zero or greater, or
+\begin{align*}
+  0 & \leqslant x^2-6x+\frac{1}{4}y^2 \> \Big{|} \cdot-4 \\
+  0 & \geqslant 4x(6-x)-y^2 \\
+  y^2 & \geqslant 4x(6-x) & \\
+  y \leqslant -2\sqrt{x(6-x)} & \vee y \geqslant 2\sqrt{x(6-x)}
+\end{align*}
+This, in turn, requires $x(6-x) \geqslant 0$ or $0 \leqslant x \leqslant 6$, which also applies
+to $\mathcal{D}(f)$, while $y$ must be equal or less to $y' = 2\sqrt{x(6-x)}$.
+We can plot $y'$ for $x \in \left[ 0, 6 \right]$.
 
 \oppgave{1 (ii)}
 
