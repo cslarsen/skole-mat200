@@ -43,31 +43,30 @@ $C=4$ is given by
   y &= \pm2\sqrt{(x+2)(8-x)}
 \end{align*}
 
-The plot of these two level-curves (or \textit{contour curves}) is given in figure
-\vref{plot.p2}. Note that we could have used scaling and shifting, which is
-much easier, but I felt like doing it this way for fun.
+The plot of these two level-curves (or \textit{contour curves}) is given in
+figure \vref{plot.p2}. Note that we could have used scaling and shifting, which
+is much easier, but I felt like doing it this way for fun.
 
 \oppgave{1 (iii)}
-First we need to find an expression of the level curve $g$ passing through $(x_0,
-y_0) = (5,6)$. Using the implicit derivative $g'$, the tangent line in $(x_0,
-y_0)$ is described by
+Any level-curve is defined by $f(x,y)=C$. For the one corresponding to $(5,6)$,
+we could insert $x_0=5$ and $y_0=6$ and find $C$, but we don't need to: When we
+perform implicit differentiation of the resulting expression---to find the
+slope in $(5,6)$, or any point, in fact---we see that $C'=0$. Therefore we go
+straight to differentiation.
 \begin{align*}
-  T(x) &= y_0 - x_0 g'(x_0, y_0) + xg'(x_0, y_0) \\
-       &= y_0 + g'(x_0, y_0)\left( x - x_0 \right)
+  C &= x^2 - 6x + \frac{1}{4}y^2 \\
+  0 &= 2x - 6 + \frac{1}{2}yy' \\
+  y' &= \frac{12-4x}{y} \\
+  y'(5,6) &= -\frac{4}{3}
 \end{align*}
-
-To find the level curve, we go through a constant $C$.
+Now that we have the slope $y'(5,6)$, we can find the tangent line going
+through this point by back-calculating the $y$-value for $x=0$ to find $\ell$.
 \begin{align*}
-  C &= \sqrt{x_0^2 - 6x_0 + \frac{1}{4}y_0^2} \\
-  C^2 &= x_0^2 - 6x_0 + \frac{1}{4}y_0^2 \\
-  C^2 &= 4 \\
-  C &= 2
+  \ell_{(x_0, y_0)} &= y_0 + y'(x_0,y_0)x_0 + y'(x_0,y_0)x \\
+  \ell_{(5,6)} &= 6+\frac{4\cdot5}{3} -\frac{4}{3}x \\
+  \ell_{(5,6)} &= -\frac{4}{3}x -\frac{38}{3}
 \end{align*}
-This gives us $g$,
-\begin{align*}
-  4 &= x^2 - 6x + \frac{1}{4}y^2 \\
-  g(x,y) &= x^2 - 6x + \frac{1}{4}y^2 - 4 \\
-\end{align*}
+This is all plotted in figure \vref{plot.p3}.
 
 \begin{figure}[h]
   \centering
@@ -81,6 +80,13 @@ This gives us $g$,
   \includegraphics{ob1plot2.png}
   \caption{Plot of $f=0$ and $f=4$ in problem 1 (ii).}
   \label{plot.p2}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{ob1plot3.png}
+  \caption{Problem 1 (iii).}
+  \label{plot.p3}
 \end{figure}
 
 \oppgave{2 (i)}
