@@ -22,47 +22,46 @@ The right-hand side is zero for $x=0$ and $x=6$, and negative for $x<0$
 and $x>6$. Thus, the inequality is true for $0 < x < 6$.
 
 For plotting $\mathcal{D}(f)$, we note that
-\begin{align*}
-  y_{-} \leqslant -2\sqrt{x(6-x)} & \wedge y_{+} \geqslant 2\sqrt{x(6-x)}
-  \,\text{for}\, 0<x<6
-\end{align*}
+  \begin{align}
+    y_{-} \leqslant -2\sqrt{x(6-x)} & \wedge y_{+} \geqslant 2\sqrt{x(6-x)}
+    \,\text{for}\, 0<x<6 \label{eq.1i}
+  \end{align}
 In fact, taken together, they form an ellipse (see figure \vref{plot.p1}).
 
-\begin{figure}[htp]
+\oppgave{1 (ii)}
+
+$C=0$ is given by (\ref{eq.1i}) above,
+\begin{align*}
+  f(x,y) = \sqrt{x^2 - 6x + \frac{1}{4}y^2} &= 0\\
+  x^2 - 6x + \frac{1}{4}y^2 &= 0\\
+  y = \pm2\sqrt{x(6-x)} \, \text{for} \, &0 \leqslant x \leqslant 6
+\end{align*}
+$C=4$ is given by
+\begin{align*}
+  f(x,y) &= \sqrt{x^2 - 6x + \frac{1}{4}y^2} = 4\\
+  \frac{1}{4}y^2 &= 16 - x^2 + 6x\\
+  y &= \pm2\sqrt{(x+2)(8-x)}
+\end{align*}
+
+The plot of these two level-curves (or \textit{contour curves}) is given in figure
+\vref{plot.p2}. Note that we could have used scaling and shifting, which is
+much easier, but I felt like doing it this way for fun.
+
+\oppgave{1 (iii)}
+
+\begin{figure}[h]
   \centering
   \includegraphics{ob1plot.png}
   \caption{Plot of $\mathcal{D}(f)$ in problem 1 (i).}
   \label{plot.p1}
 \end{figure}
 
-\oppgave{1 (ii)}
-
-This is the same as solving $f=0$ and $f=4$, or
-
-\begin{align*}
-  f(x,y) &= 0 \\
-  \sqrt{x^2 - 6x + \frac{1}{4}y^2} &= 0\\
-  x^2 - 6x + \frac{1}{4}y^2 &= 0\\
-  y^2 = -4(x^2 - 6x) &= 4x(6-x) \\
-  \\
-  f(x,y) &= 4 \\
-  \sqrt{x^2 - 6x + \frac{1}{4}y^2} &= 4\\
-  x^2 - 6x + \frac{1}{4}y^2 &= 16 \\
-  y^2 = -4\left(x^2 - 6x - 16\right) &= -4(x-8)(x+2) \\
-\end{align*}
-
-By the previous results, for $f=0$ we get $y = \pm 2\sqrt{4x(6-x)}$, which is
-the same ellipse as we got in (ii). See \vref{plot.p2}.
-
-\begin{figure}[htp]
+\begin{figure}[h]
   \centering
   \includegraphics{ob1plot2.png}
   \caption{Plot of $f=0$ and $f=4$ in problem 1 (ii).}
   \label{plot.p2}
 \end{figure}
-
-
-\oppgave{1 (iii)}
 
 \oppgave{2 (i)}
 
