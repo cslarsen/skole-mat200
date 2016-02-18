@@ -121,21 +121,22 @@ and $F_y = \frac{\partial F}{\partial y}$. We start by organizing $F$.
 \begin{align*}
   F &= (2y-2x)\sin^2{(xy-\frac{\pi}{4})}
       = 2y\sin^2{(xy-\frac{\pi}{4})} - 2x\sin^2{(xy-\frac{\pi}{4})} \\
-      &= 2y\sin^2{g}-2x\sin^2{g} \\
+      &= 2y\sin^2{g}-2x\sin^2{g} \,\text{where}\, g=xy-\frac{\pi}{4}\\
       \\
   F_x &= 0+2y^22\sin{g}\cos{g} -2\sin^2{g} - 2xy2\sin{g}\cos{g} \\
       &= 2y^2\sin{2g} - 2\sin^2{g} - 2xy\sin{2g} \\
       &= (2y^2-2xy)\sin{2g} - 2\sin^2{g} \\
       &= 2y(y-x)\sin{2g} - 2\sin^2{g} \\
+      \\
+  F_y &= 2\sin^2{g} + 2y2x\sin{g}\cos{g} - 0 - 2x2x\sin{g}\cos{g} \\
+      &= 2\sin^2{g} + x\sin{2g}(2y-2x) \\
+      &= 2\sin^2{xy-\frac{\pi}{4}} + x\sin{2xy-\frac{\pi}{2}}(2y-2x)
 \end{align*}
 The values for $(0,2)$ give
 \begin{align*}
   g(0,2) &= -\frac{\pi}{4} \\
       F_x(0,2) &= 8\sin{-\frac{\pi}{2}} - 2\sin^2{-\frac{\pi}{4}}
-               = -8-1 = -9
-  F_y &= 2\sin^2{g} + 2y2x\sin{g}\cos{g} - 0 - 2x2x\sin{g}\cos{g} \\
-      &= 2\sin^2{g} + x\sin{2g}(2y-2x) \\
-      &= 2\sin^2{xy-\frac{\pi}{4}} + x\sin{2xy-\frac{\pi}{2}}(2y-2x) \\
+               = -8-1 = -9 \\
   F_y(0,2) &= 1 \\
   F(0,2) &= 2(2-0)\sin^2{(0-\frac{\pi}{4})} = 4\sin^2{(-\frac{\pi}{4})} = 2 \\
 \end{align*}
