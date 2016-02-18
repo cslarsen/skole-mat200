@@ -115,23 +115,9 @@ Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
 \end{align*}
 
 \oppgave{3 (i)}
-The tangent plane can be described by the normal vector $\mathbf{n} =
-\mathbf{i}F_x(a,b) + \mathbf{j}F_y(a,b) - \mathbf{k}$ in $(a, b, F(a,b))$.
+To find the tangent place, we must find $F_x = \frac{\partial F}{\partial x}$
+and $F_y = \frac{\partial F}{\partial y}$. We start by organizing $F$.
 %
-\begin{align*}
-  F(0,2) &= 2(2-0)\sin^2{(0-\frac{\pi}{4})}
-    = 4\sin^2{(-\frac{\pi}{4})} = -2
-\end{align*}
-The plane is then described by
-\begin{align*}
-  F_x = \frac{\partial F}{\partial x}&,
-  F_y = \frac{\partial F}{\partial y} \\
-  F(x,y) - F(a,b) &= F_x(a,b)(x-a) + F_y(a,b)(y-b) \\
-  F(x,y) + 2 &= xF_x(0,2) + F_y(0,2)(y-2)
-\end{align*}
-%
-In finding $F_x$ and $F_y$, we start by organizing $F$. We'll also set
-$g=xy-\frac{\pi}{4}$ and thus $g'_x=y$ and $g'_y=x$.
 \begin{align*}
   F &= (2y-2x)\sin^2{(xy-\frac{\pi}{4})}
       = 2y\sin^2{(xy-\frac{\pi}{4})} - 2x\sin^2{(xy-\frac{\pi}{4})} \\
@@ -141,18 +127,27 @@ $g=xy-\frac{\pi}{4}$ and thus $g'_x=y$ and $g'_y=x$.
       &= 2y^2\sin{2g} - 2\sin^2{g} - 2xy\sin{2g} \\
       &= (2y^2-2xy)\sin{2g} - 2\sin^2{g} \\
       &= 2y(y-x)\sin{2g} - 2\sin^2{g} \\
+\end{align*}
+The values for $(0,2)$ give
+\begin{align*}
   g(0,2) &= -\frac{\pi}{4} \\
       F_x(0,2) &= 8\sin{-\frac{\pi}{2}} - 2\sin^2{-\frac{\pi}{4}}
                = -8-1 = -9
-      \\
   F_y &= 2\sin^2{g} + 2y2x\sin{g}\cos{g} - 0 - 2x2x\sin{g}\cos{g} \\
       &= 2\sin^2{g} + x\sin{2g}(2y-2x) \\
       &= 2\sin^2{xy-\frac{\pi}{4}} + x\sin{2xy-\frac{\pi}{2}}(2y-2x) \\
-  F_y(0,2) &= 1
+  F_y(0,2) &= 1 \\
+  F(0,2) &= 2(2-0)\sin^2{(0-\frac{\pi}{4})} = 4\sin^2{(-\frac{\pi}{4})} = 2 \\
 \end{align*}
-We now plug in those values for the plane equation given above.
+The tangent plane is given by
 \begin{align*}
-  F + 2 = -9x + y-2 \\
+  F - F(a,b) &= F_x(a,b)(x-a) + F_y(a,b)(y-b) \\
+  F + 2 &= xF_x(0,2) + F_y(0,2)(y-2)
+\end{align*}
+Plugging in the above values, we get the tangent plane equation.
+\begin{align*}
+  F - 2 &= xF_x(0,2) + F_y(0,2)(y-2)
+  F - 2 = -9x + y - 2 \\
   \svar{F = y-9x}
 \end{align*}
 
