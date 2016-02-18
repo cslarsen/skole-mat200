@@ -85,6 +85,22 @@ Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
 \end{align*}
 
 \oppgave{2 (ii)}
+\begin{align*}
+  \frac{\partial^2 f}{\partial x^2} &= \frac{\partial f}{\partial x} \frac{\partial f}{\partial x} 
+    = \frac{e^{4y}y^2}{(x^2-y^2)^2} \\
+  \\
+  \frac{\partial^2 f}{\partial x \partial y} &=
+    \frac{\partial f}{\partial y} \frac{\partial f}{\partial x} =
+    \left(\frac{-e^{2y}y}{x^2-y^2}\right) e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{x}{x^2+y^2} \right) \\
+  &= \frac{-ye^{4y}}{x^2-y^2}
+          \left(
+            2\arctan{\frac{y}{x}} + \frac{x}{x^2+y^2}
+          \right) \\
+  &= \frac{-ye^{4y}}{x^4-y^4}
+          \left(
+            2\arctan{\frac{y}{x}}(x^2+y^2) + x
+          \right)
+\end{align*}
 
 \oppgave{2 (iii)}
 
