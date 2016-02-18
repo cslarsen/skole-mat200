@@ -134,7 +134,8 @@ In finding $F_x$ and $F_y$, we start by organizing $F$. We'll also set
 $g=xy-\frac{\pi}{4}$ and thus $g'_x=y$ and $g'_y=x$.
 \begin{align*}
   F &= (2y-2x)\sin^2{(xy-\frac{\pi}{4})}
-      = 2y\sin^2{(xy-\frac{\pi}{4})} - 2x\sin^2{(xy-\frac{\pi}{4})}
+      = 2y\sin^2{(xy-\frac{\pi}{4})} - 2x\sin^2{(xy-\frac{\pi}{4})} \\
+      &= 2y\sin^2{g}-2x\sin^2{g} \\
       \\
   F_x &= 0+2y^22\sin{g}\cos{g} -2\sin^2{g} - 2xy2\sin{g}\cos{g} \\
       &= 2y^2\sin{2g} - 2\sin^2{g} - 2xy\sin{2g} \\
@@ -143,6 +144,16 @@ $g=xy-\frac{\pi}{4}$ and thus $g'_x=y$ and $g'_y=x$.
   g(0,2) &= -\frac{\pi}{4} \\
       F_x(0,2) &= 8\sin{-\frac{\pi}{2}} - 2\sin^2{-\frac{\pi}{4}}
                = -8-1 = -9
+      \\
+  F_y &= 2\sin^2{g} + 2y2x\sin{g}\cos{g} - 0 - 2x2x\sin{g}\cos{g} \\
+      &= 2\sin^2{g} + x\sin{2g}(2y-2x) \\
+      &= 2\sin^2{xy-\frac{\pi}{4}} + x\sin{2xy-\frac{\pi}{2}}(2y-2x) \\
+  F_y(0,2) &= 1
+\end{align*}
+We now plug in those values for the plane equation given above.
+\begin{align*}
+  F + 2 &= -9x + y-2 \\
+  F &= y-9x
 \end{align*}
 
 \oppgave{3 (ii)}
