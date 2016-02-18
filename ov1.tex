@@ -116,29 +116,29 @@ Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
 
 \oppgave{3 (i)}
 To find the tangent place, we must find $F_x = \frac{\partial F}{\partial x}$
-and $F_y = \frac{\partial F}{\partial y}$. We start by organizing $F$.
+and $F_y = \frac{\partial F}{\partial y}$. We start by organizing $F$, setting
+$g=xy-\frac{\pi}{4}$ and getting $g'_x=y$ and $g'_y=x$.
 %
 \begin{align*}
   F &= (2y-2x)\sin^2{(xy-\frac{\pi}{4})}
       = 2y\sin^2{(xy-\frac{\pi}{4})} - 2x\sin^2{(xy-\frac{\pi}{4})} \\
-      &= 2y\sin^2{g}-2x\sin^2{g} \,\text{where}\, g=xy-\frac{\pi}{4}\\
-      \\
+      &= 2y\sin^2{g}-2x\sin^2{g} \\
+\\
   F_x &= 0+2y^22\sin{g}\cos{g} -2\sin^2{g} - 2xy2\sin{g}\cos{g} \\
       &= 2y^2\sin{2g} - 2\sin^2{g} - 2xy\sin{2g} \\
       &= (2y^2-2xy)\sin{2g} - 2\sin^2{g} \\
       &= 2y(y-x)\sin{2g} - 2\sin^2{g} \\
-      \\
+\\
   F_y &= 2\sin^2{g} + 2y2x\sin{g}\cos{g} - 0 - 2x2x\sin{g}\cos{g} \\
       &= 2\sin^2{g} + x\sin{2g}(2y-2x) \\
       &= 2\sin^2{xy-\frac{\pi}{4}} + x\sin{2xy-\frac{\pi}{2}}(2y-2x)
 \end{align*}
-The values for $(0,2)$ give
+Inserting the point $(0,2)$ gives
 \begin{align*}
   g(0,2) &= -\frac{\pi}{4} \\
-      F_x(0,2) &= 8\sin{-\frac{\pi}{2}} - 2\sin^2{-\frac{\pi}{4}}
-               = -8-1 = -9 \\
+  F_x(0,2) &= 8\sin{-\frac{\pi}{2}} - 2\sin^2{-\frac{\pi}{4}} = -8-1 = -9 \\
   F_y(0,2) &= 1 \\
-  F(0,2) &= 2(2-0)\sin^2{(0-\frac{\pi}{4})} = 4\sin^2{(-\frac{\pi}{4})} = 2 \\
+  F(0,2) &= 2(2-0)\sin^2{(0-\frac{\pi}{4})} = 4\sin^2{(-\frac{\pi}{4})} = 2
 \end{align*}
 The tangent plane is given by
 \begin{align*}
