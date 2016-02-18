@@ -68,28 +68,19 @@ point by back-calculating the $y$-value for $x=0$ to find $\ell$.
 \end{align*}
 This is all plotted in figure \vref{plot.p3}.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics{ob1plot.png}
-  \caption{Plot of $\mathcal{D}(f)$ in problem 1 (i).}
-  \label{plot.p1}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics{ob1plot2.png}
-  \caption{Plot of $C=0$ and $C=4$ in problem 1 (ii).}
-  \label{plot.p2}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics{ob1plot3.png}
-  \caption{Plot of tangent line $\ell_{(5,6)}$ in problem 1 (iii).}
-  \label{plot.p3}
-\end{figure}
-
 \oppgave{2 (i)}
+Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
+\begin{align*}
+  \frac{\partial f}{\partial x} &=
+    e^{2y}\frac{1}{\frac{x^2}{y^2}-1}\frac{y}{x^2} = \frac{-e^{2y}y}{x^2-y^2} \\
+    \\
+    \frac{\partial f}{\partial y} &= \frac{\partial}{\partial y}(uv) =
+    u'v+uv' \,\text{where}\, u=e^{2y} \,\text{and}\, v=\arctan{\frac{y}{x}} \\
+    &= e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{1}{1+\frac{y^2}{x^2}}\cdot\frac{1}{x}\right) \\
+    &= e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{1}{x+\frac{y^2}{x}}\right) \\
+    &= e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{1}{\frac{1}{x}(x^2+y^2)}\right) \\
+    &= e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{x}{x^2+y^2} \right) \\
+\end{align*}
 
 \oppgave{2 (ii)}
 
@@ -110,5 +101,26 @@ This is all plotted in figure \vref{plot.p3}.
   y &= 1 \\
   F(0,1) &= 1
 \end{align*}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{ob1plot.png}
+  \caption{Plot of $\mathcal{D}(f)$ in problem 1 (i).}
+  \label{plot.p1}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{ob1plot2.png}
+  \caption{Plot of $C=0$ and $C=4$ in problem 1 (ii).}
+  \label{plot.p2}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{ob1plot3.png}
+  \caption{Plot of tangent line $\ell_{(5,6)}$ in problem 1 (iii).}
+  \label{plot.p3}
+\end{figure}
 
 \end{document}
