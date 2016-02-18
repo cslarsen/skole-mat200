@@ -103,6 +103,16 @@ Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
 \end{align*}
 
 \oppgave{2 (iii)}
+\begin{align*}
+  g(s,t) &= f(s, st, s+t) = e^{s+t} + e^{2st}\arctan{t} \\
+  \\
+  \frac{\partial g}{\partial s} &= e^{s+t} + 2te^{2st}\arctan{t} \\
+  \\
+  \frac{\partial g}{\partial t} &= e^{s+t} + (uv)' \,\text{where}\, u=e^{2st}
+    \,\text{and}\, v=\arctan{t} \\
+    &= e^{s+t} + u'v + u+v' \\
+    &= e^{st} + 2se^{2st}\arctan{t} + e^{2st}\frac{1}{1+t^2}
+\end{align*}
 
 \oppgave{3 (i)}
 
