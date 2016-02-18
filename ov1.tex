@@ -115,11 +115,26 @@ Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
 \end{align*}
 
 \oppgave{3 (i)}
-We need to find $\frac{\partial F}{\partial x} = F_x$ and $\frac{\partial
-F}{\partial y} = F_y$.
+The tangent plane can be described by the normal vector $\mathbf{n} =
+\mathbf{i}F_x(a,b) + \mathbf{j}F_y(a,b) - \mathbf{k}$ in $(a, b, F(a,b))$.
+%
 \begin{align*}
-  f &= (2y-2x)\sin^2{(xy-\frac{\pi}{4})}
-      = 2y\sin^2{(xy-\frac{\pi}{4})} - 2x\sin^2{(xy-\frac{\pi}{4})}
+  F(0,2) &= 2(2-0)\sin^2{(0-\frac{\pi}{4})}
+    = 4\sin^2{(-\frac{\pi}{4})} = -2
+\end{align*}
+The plane is then described by
+\begin{align*}
+  F(x,y) - F(a,b) = F_x(a,b)(x-a) + F_y(a,b)(y-b)
+\end{align*}
+%
+\begin{align*}
+  F_x &= \frac{\partial F}{\partial x},
+  F_y = \frac{\partial F}{\partial y} \\
+  F &= (2y-2x)\sin^2{(xy-\frac{\pi}{4})}
+      = 2y\sin^2{(xy-\frac{\pi}{4})} - 2x\sin^2{(xy-\frac{\pi}{4})} \\
+      \\
+    \frac{\partial F}{\partial x} &=
+      ...
 \end{align*}
 
 \oppgave{3 (ii)}
