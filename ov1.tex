@@ -144,7 +144,7 @@ Plugging in the above values, we get the tangent plane equation.
 \end{align*}
 
 \oppgave{3 (ii)}
-Using the tangent plane as the two-dimensional slope of $F$ at a point $(x0,
+Using the tangent equations as the component slopes of $F$ at a point $(x0,
 y0)$, the linear approximation is given by
 \begin{align*}
   L(x,y) &= F(x_0, y_0) + F_x(x_0, y_0)(x-x_0) + F_y(x_0, y_0)(y-y_0)
@@ -158,16 +158,15 @@ We'll choose the point $(x_0, y_0) = (-1, 0)$ to approximate $F(-1.05, 0.02)$.
   L_{(-1,0)}(-1.05, 0.02)
     &= 3\cdot0.02 + 1.05 = 1.11
 \end{align*}
-For comparison, the exact value is $F(-1.05, 0.02) \approx 1.11493$, meaning
-the approximation is not \textit{too} bad.
-Equivalently, we can also use a tangent plane equation at $(-1,0)$.
+For comparison, the correct value $F(-1.05, 0.02) \approx 1.11493$, so the
+approximation seems reasonable. Of course, instead of tangent lines, we could
+have used the tangent plane equation at $(-1,0)$ directly:
 \begin{align*}
   T_{(-1,0)}(x,y)
     &= F_x(-1,0)(x+1) + F_y(-1,0)(y-0) + F(-1,0)\\
     &= -x-1 + 3y + 1 = 3y-x
 \end{align*}
-In fact, these two methods are \textit{exactly} the same, as you can see by the
-equations, so $T(x,y) = L(x,y)$.
+The two methods are exactly the same.
 
 \oppgave{3 (iii)}
 \textit{Not answered}
