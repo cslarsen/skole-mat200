@@ -169,17 +169,42 @@ equation from the previous problem directly. At $(-1,0)$, it is
 The two methods are exactly the same.
 
 \oppgave{3 (iii)}
-\textit{Not answered}
+\begin{align*}
+  g &= xy-\frac{\pi}{4} \\
+  g' &= y+xy' \\
+  s &= \sin^2{g} \\
+  s' &= 2\cos{g}\sin{g}g' = 2\cos{g}\sin{g}(y+xy') \\
+  (2ys-2xs)' &= 1' \\
+  2y's+2ys'-2s-2xs' &= 0 \\
+  2y's+2ys'-2xs' &= 2s \\
+  2y's+s'(2y-2x) &= 2s \\
+  2y's+2\cos{g}\sin{g}(y+xy')(2y-2x) &= 2s \\
+  h &= \cos{g}\sin{g} \\
+  2y's+2h(y+xy')(y-2x) &= 2s \\
+  2y's+(2hy+2hxy')(y-2x) &= 2s \\
+  2y's+2hy^2+2hxyy'-4hyx-4hx^2y' &= 2s \\
+  y'(2s+2hxy-4hx^2)+2hy(y-2x) &= 2s \\
+  y'(2s+2hxy-4hx^2) &= 2s-2hy(y-2x) \\
+  y' &= \frac{2s-2hy(y-2x)}{2s+2hxy-4hx^2)} \\
+  y' &= \frac{s-hy(y-2x)}{s+hxy-2hx^2} \\
+  y' &= \frac{s-hy(y-2x)}{s+hx(y-2x)} \\
+  y' &= \frac{
+          \sin^2{(xy-\frac{\pi}{4})}
+          - \cos{(xy-\frac{\pi}{4})}
+            \sin{(xy-\frac{\pi}{4})} y(y-2x)
+         } {
+          \sin^2{(xy-\frac{\pi}{4})}
+          + \cos{(xy-\frac{\pi}{4})}
+            \sin{(xy-\frac{\pi}{4})} x(y-2x)
+         }
+\end{align*}
 
 \oppgave{3 (iv)}
-\textit{Not answered}
-%\begin{align*}
-  %F(0,y) &= 1 \\
-  %2y \sin^2(-\frac{\pi}{4}) &= 1 \\
-  %2y\frac{1}{2} &= 1 \\
-  %y &= 1 \\
-  %F(0,1) &= 1
-%\end{align*}
+\begin{align*}
+  F(0,y) &= 1 \\
+  2y\sin^2{-\frac{\pi}{4}} &= 1\\
+  y &= 1 \,\text{when}\, F(0,y)=1\\
+\end{align*}
 
 \begin{figure}[h]
   \centering
