@@ -8,14 +8,10 @@
 
 \begin{document}
 \maketitle
-
 \oppgave{1 (i)}
-\label{problem.1}
-
 The radicand must be zero or greater, or
 \begin{align*}
-  0 & \leqslant x^2-6x+\frac{1}{4}y^2 \> \Big{|} \cdot-4 \\
-  0 & \geqslant 4x(6-x)-y^2 \\
+  0 & \leqslant x^2-6x+\frac{1}{4}y^2 \> \Big{|} \cdot-4, +y^2 \\
   y^2 & \geqslant 4x(6-x)
 \end{align*}
 The right-hand side is zero for $x=0$ and $x=6$, and negative for $x<0$
@@ -26,7 +22,7 @@ For plotting $\mathcal{D}(f)$, we note that
     y_{-} \leqslant -2\sqrt{x(6-x)} & \wedge y_{+} \geqslant 2\sqrt{x(6-x)}
     \,\text{for}\, 0<x<6 \label{eq.1i}
   \end{align}
-In fact, taken together, they form an ellipse (see figure \vref{plot.p1}).
+In fact, taken together, they form an ellipse---see figure \vref{plot.p1}.
 
 \oppgave{1 (ii)}
 
@@ -66,21 +62,18 @@ point by back-calculating the $y$-value for $x=0$ to find $\ell$.
   \ell_{(5,6)} &= 6+\frac{4\cdot5}{3} -\frac{4}{3}x \\
   \ell_{(5,6)} &= -\frac{4}{3}x -\frac{38}{3}
 \end{align*}
-This is all plotted in figure \vref{plot.p3}.
+This is plotted in figure \vref{plot.p3}.
 
 \oppgave{2 (i)}
 Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
 \begin{align*}
   \frac{\partial f}{\partial x} &=
-    e^{2y}\frac{1}{\frac{x^2}{y^2}-1}\frac{y}{x^2} = \frac{-e^{2y}y}{x^2-y^2} \\
-    \\
+    e^{2y}\frac{1}{\frac{x^2}{y^2}-1}\frac{y}{x^2} 
+      = \frac{-e^{2y}y}{x^2-y^2} \\
     \frac{\partial f}{\partial y} &= \frac{\partial}{\partial y}(uv) =
     u'v+uv' \,\text{where}\, u=e^{2y} \,\text{and}\, v=\arctan{\frac{y}{x}} \\
-    &= e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{1}{1+\frac{y^2}{x^2}}\cdot\frac{1}{x}\right) \\
-    &= e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{1}{x+\frac{y^2}{x}}\right) \\
-    &= e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{1}{\frac{1}{x}(x^2+y^2)}\right) \\
-    &= e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{x}{x^2+y^2} \right) \\
-    \\
+    &= e^{2y}\left( 2\arctan{\left(\frac{y}{x}\right)} + \frac{1}{1+\frac{y^2}{x^2}}\cdot\frac{1}{x}\right) \\
+    &= e^{2y}\left( 2\arctan{\left(\frac{y}{x}\right)} + \frac{x}{x^2+y^2} \right) \\
     \frac{\partial f}{\partial z} &= e^z \>\>\>\>\text{\tiny{(phew)}}
 \end{align*}
 
@@ -90,15 +83,15 @@ Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
     = \frac{e^{4y}y^2}{(x^2-y^2)^2} \\
   \\
   \frac{\partial^2 f}{\partial x \partial y} &=
-    \frac{\partial f}{\partial y} \frac{\partial f}{\partial x} =
-    \left(\frac{-e^{2y}y}{x^2-y^2}\right) e^{2y}\left( 2\arctan{\frac{y}{x}} + \frac{x}{x^2+y^2} \right) \\
+    \frac{\partial f}{\partial x} \frac{\partial f}{\partial y} =
+    \left(\frac{-e^{2y}y}{x^2-y^2}\right) e^{2y}\left( 2\arctan{\left(\frac{y}{x}\right)} + \frac{x}{x^2+y^2} \right) \\
   &= \frac{-ye^{4y}}{x^2-y^2}
           \left(
-            2\arctan{\frac{y}{x}} + \frac{x}{x^2+y^2}
+            2\arctan{\left(\frac{y}{x}\right)} + \frac{x}{x^2+y^2}
           \right) \\
   &= \frac{-ye^{4y}}{x^4-y^4}
           \left(
-            2\arctan{\frac{y}{x}}(x^2+y^2) + x
+            2\arctan{\left(\frac{y}{x}\right)}(x^2+y^2) + x
           \right)
 \end{align*}
 
