@@ -169,34 +169,21 @@ equation from the previous problem directly. At $(-1,0)$, it is
 The two methods are exactly the same.
 
 \oppgave{3 (iii)}
+We'll be using $\sin^2{u} = \frac{1-\cos{2u}}{2}$ with $u=xy-\frac{\pi}{4}$.
 \begin{align*}
-  g &= xy-\frac{\pi}{4} \\
-  g' &= y+xy' \\
-  s &= \sin^2{g} \\
-  s' &= 2\cos{g}\sin{g}g' = 2\cos{g}\sin{g}(y+xy') \\
-  (2ys-2xs)' &= 1' \\
-  2y's+2ys'-2s-2xs' &= 0 \\
-  2y's+2ys'-2xs' &= 2s \\
-  2y's+s'(2y-2x) &= 2s \\
-  2y's+2\cos{g}\sin{g}(y+xy')(2y-2x) &= 2s \\
-  h &= \cos{g}\sin{g} \\
-  2y's+2h(y+xy')(y-2x) &= 2s \\
-  2y's+(2hy+2hxy')(y-2x) &= 2s \\
-  2y's+2hy^2+2hxyy'-4hyx-4hx^2y' &= 2s \\
-  y'(2s+2hxy-4hx^2)+2hy(y-2x) &= 2s \\
-  y'(2s+2hxy-4hx^2) &= 2s-2hy(y-2x) \\
-  y' &= \frac{2s-2hy(y-2x)}{2s+2hxy-4hx^2)} \\
-  y' &= \frac{s-hy(y-2x)}{s+hxy-2hx^2} \\
-  y' &= \frac{s-hy(y-2x)}{s+hx(y-2x)} \\
-  y' &= \frac{
-          \sin^2{(xy-\frac{\pi}{4})}
-          - \cos{(xy-\frac{\pi}{4})}
-            \sin{(xy-\frac{\pi}{4})} y(y-2x)
-         } {
-          \sin^2{(xy-\frac{\pi}{4})}
-          + \cos{(xy-\frac{\pi}{4})}
-            \sin{(xy-\frac{\pi}{4})} x(y-2x)
-         }
+  2(y-x)\sin^2{(xy-\frac{\pi}{4})} &= 1 \\
+  y(1-\cos{2u}) - x(1-\cos{2u}) &= 1 \\
+  y - y\cos{2u} - x + x\cos{2u} &= 1 \\
+  y - y\cos{2u} + x\cos{2u} &= 1 + x \\
+\end{align*}
+Differentiating both sides gives
+\begin{align*}
+  y'-y'\cos{2u}+2y\sin{2u}(y+xy')+\cos{2u}-2x\sin{2u}(y+xy') &= 1 \\
+  y'-y'\cos{2u}+2y\sin{2u}(y+xy')-2x\sin{2u}(y+xy')  + \cos{2u} &= 1 \\
+  y'-y'\cos{2u}+2y^2\sin{2u}+2xyy'\sin{2u}-2xy\sin{2u} - 2x^2y'\sin{2u} + \cos{2u} &= 1 \\
+  y'(1-\cos{2u}+2xy\sin{2u} - 2x^2\sin{2u}) + (\cos{2u} + 2y^2\sin{2u} - 2xy\sin{2u}) &= 1 \\
+  y' = \frac{ 1 -\cos{2u} - 2y^2\sin{2u} + 2xy\sin{2u} }
+            { 1 -\cos{2u} - 2x^2\sin{2u} + 2xy\sin{2u} }
 \end{align*}
 
 \oppgave{3 (iv)}
