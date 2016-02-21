@@ -169,21 +169,26 @@ equation from the previous problem directly. At $(-1,0)$, it is
 The two methods are exactly the same.
 
 \oppgave{3 (iii)}
-We'll be using $\sin^2{u} = \frac{1-\cos{2u}}{2}$ with $u=xy-\frac{\pi}{4}$.
+We'll be using $\sin^2{u} = \frac{1-\cos{2u}}{2}$ with $u=xy-\frac{\pi}{4}$ and
+$(2u)' = 2(y+xy')$.
 \begin{align*}
   2(y-x)\sin^2{(xy-\frac{\pi}{4})} &= 1 \\
-  y(1-\cos{2u}) - x(1-\cos{2u}) &= 1 \\
-  y - y\cos{2u} - x + x\cos{2u} &= 1 \\
-  y - y\cos{2u} + x\cos{2u} &= 1 + x \\
+  2(y-x)\frac{1-\cos{2u}}{2} &= 1 \\
+  (y-x)(1-\cos{2u}) &= 1 \\
 \end{align*}
-Differentiating both sides gives
+Differentiating both sides
 \begin{align*}
-  y'-y'\cos{2u}+2y\sin{2u}(y+xy')+\cos{2u}-2x\sin{2u}(y+xy') &= 1 \\
-  y'-y'\cos{2u}+2y\sin{2u}(y+xy')-2x\sin{2u}(y+xy')  + \cos{2u} &= 1 \\
-  y'-y'\cos{2u}+2y^2\sin{2u}+2xyy'\sin{2u}-2xy\sin{2u} - 2x^2y'\sin{2u} + \cos{2u} &= 1 \\
-  y'(1-\cos{2u}+2xy\sin{2u} - 2x^2\sin{2u}) + (\cos{2u} + 2y^2\sin{2u} - 2xy\sin{2u}) &= 1 \\
-  y' = \frac{ 1 -\cos{2u} - 2y^2\sin{2u} + 2xy\sin{2u} }
-            { 1 -\cos{2u} - 2x^2\sin{2u} + 2xy\sin{2u} }
+  (y'-1)(1-\cos{2u}) + 2(y-x)(y+xy')\sin{2u} &= 0 \\
+  y'\cos{2u} + 2(y-x)(y+xy')\sin{2u} &= \cos{2u} \\
+  y'\cos{2u} + (y^2+xyy'-xy-x^2y')2\sin{2u} &= \cos{2u} \\
+  y'\cos{2u} + 2y'(xy+x^2)\sin{2u}+2(y^2-xy)\sin{2u} &= \cos{2u} \\
+  y'\cos{2u} + 2y'(xy+x^2)\sin{2u} &= \cos{2u}-2y^2\sin{2u}+2xy\sin{2u} \\
+  y'(\cos{2u} + 2(xy+x^2)\sin{2u}) &= \cos{2u}-2y^2\sin{2u}+2xy\sin{2u} \\
+\end{align*}
+\begin{align*}
+  y'(\cos{2u} + 2(xy+x^2)\sin{2u}) &= \cos{2u}-2y^2\sin{2u}+2xy\sin{2u} \\
+  y' &= \frac{ -2y^2\sin{2u} + 2xy\sin{2u} + \cos{2u} }
+             {  2x^2\sin{2u} + 2xy\sin{2u} + \cos{2u} } \\
 \end{align*}
 
 \oppgave{3 (iv)}
