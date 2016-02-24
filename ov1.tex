@@ -60,28 +60,36 @@ point by back-calculating the $y$-value for $x=0$ to find $\ell$.
 \begin{align*}
   \ell_{(x_0, y_0)} &= y_0 - x_0y'(x_0,y_0) + y'(x_0,y_0)x \\
   \ell_{(5,6)} &= 6+\frac{4\cdot5}{3} -\frac{4}{3}x \\
-  \ell_{(5,6)} &= -\frac{4}{3}x -\frac{38}{3}
+  \ell_{(5,6)} &= -\frac{4}{3}x +\frac{38}{3}
 \end{align*}
 This is plotted in figure \vref{plot.p3}.
 
 \oppgave{2 (i)}
 Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
 \begin{align*}
+  % df/dx
   \frac{\partial f}{\partial x} &=
-    e^{2y}\frac{1}{\frac{x^2}{y^2}-1}\frac{y}{x^2} 
-      = \frac{-e^{2y}y}{x^2-y^2} \\
+    e^{2y}\frac{1}{\frac{x^2}{y^2}+1} \left(\frac{-y}{x^2}\right)
+      = \frac{-ye^{2y}}{x^2+y^2}
+  \\
+  % df/dy
     \frac{\partial f}{\partial y} &= \frac{\partial}{\partial y}(uv) =
-    u'v+uv' \,\text{where}\, u=e^{2y} \,\text{and}\, v=\arctan{\frac{y}{x}} \\
+    u'v+uv' \,\text{where}\, u=e^{2y} \,\text{and}\, v=\arctan{\frac{y}{x}}
+    \\
     &= e^{2y}\left( 2\arctan{\left(\frac{y}{x}\right)} + \frac{1}{1+\frac{y^2}{x^2}}\cdot\frac{1}{x}\right) \\
     &= e^{2y}\left( 2\arctan{\left(\frac{y}{x}\right)} + \frac{x}{x^2+y^2} \right) \\
-    \frac{\partial f}{\partial z} &= e^z \>\>\>\>\text{\tiny{(phew)}}
+    \frac{\partial f}{\partial z} &= e^z
 \end{align*}
 
 \oppgave{2 (ii)}
 \begin{align*}
-  \frac{\partial^2 f}{\partial x^2} &= \frac{\partial f}{\partial x} \frac{\partial f}{\partial x} 
-    = \frac{e^{4y}y^2}{(x^2-y^2)^2} \\
+  % d^2f/dx^2
+  \frac{\partial^2 f}{\partial x^2} &=
+  \frac{\partial}{\partial x} \left(\frac{-ye^{2y}}{x^2+y^2}\right)
+    = \frac{2xye^{2y}}{(x^2+y^2)^2}
   \\
+  \\
+  % d^2f/(dx dy)
   \frac{\partial^2 f}{\partial x \partial y} &=
     \frac{\partial f}{\partial x} \frac{\partial f}{\partial y} =
     \left(\frac{-e^{2y}y}{x^2-y^2}\right) e^{2y}\left( 2\arctan{\left(\frac{y}{x}\right)} + \frac{x}{x^2+y^2} \right) \\
