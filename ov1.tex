@@ -70,14 +70,15 @@ Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
   % df/dx
   \frac{\partial f}{\partial x} &=
     e^{2y}\frac{1}{\frac{x^2}{y^2}+1} \left(\frac{-y}{x^2}\right)
-      = \frac{-ye^{2y}}{x^2+y^2}
+      = \frac{-ye^{2y}}{x^2+y^2} \\
   \\
   % df/dy
     \frac{\partial f}{\partial y} &= \frac{\partial}{\partial y}(uv) =
     u'v+uv' \,\text{where}\, u=e^{2y} \,\text{and}\, v=\arctan{\frac{y}{x}}
     \\
-    &= e^{2y}\left( 2\arctan{\left(\frac{y}{x}\right)} + \frac{1}{1+\frac{y^2}{x^2}}\cdot\frac{1}{x}\right) \\
-    &= e^{2y}\left( 2\arctan{\left(\frac{y}{x}\right)} + \frac{x}{x^2+y^2} \right) \\
+    &= 2e^{2y}\arctan{\left(\frac{y}{x}\right)} + \frac{e^{2y}}{1+\frac{y^2}{x^2}}\cdot\frac{1}{x}
+    = 2e^{2y}\arctan{\left(\frac{y}{x}\right)} + \frac{xe^{2y}}{x^2+y^2} \\
+    \\
     \frac{\partial f}{\partial z} &= e^z
 \end{align*}
 
@@ -91,16 +92,10 @@ Given $f(x,y,z) = e^z + e^{2y}\arctan{\frac{y}{x}}$,
   \\
   % d^2f/(dx dy)
   \frac{\partial^2 f}{\partial x \partial y} &=
-    \frac{\partial f}{\partial x} \frac{\partial f}{\partial y} =
-    \left(\frac{-e^{2y}y}{x^2-y^2}\right) e^{2y}\left( 2\arctan{\left(\frac{y}{x}\right)} + \frac{x}{x^2+y^2} \right) \\
-  &= \frac{-ye^{4y}}{x^2-y^2}
-          \left(
-            2\arctan{\left(\frac{y}{x}\right)} + \frac{x}{x^2+y^2}
-          \right) \\
-  &= \frac{-ye^{4y}}{x^4-y^4}
-          \left(
-            2\arctan{\left(\frac{y}{x}\right)}(x^2+y^2) + x
-          \right)
+  \frac{\partial}{\partial x} \left(\frac{\partial f}{\partial y}\right) =
+    \frac{\partial}{\partial x} \left( 
+      2e^{2y}\arctan{\left(\frac{y}{x}\right)} + \frac{xe^{2y}}{x^2+y^2}
+    \right)
 \end{align*}
 
 \oppgave{2 (iii)}
