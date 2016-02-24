@@ -79,7 +79,6 @@ This is plotted in figure \vref{plot.p3}.
     \\
     &= 2e^{2y}\arctan{\left(\frac{y}{x}\right)} + \frac{e^{2y}}{1+\frac{y^2}{x^2}}\cdot\frac{1}{x}
     = 2e^{2y}\arctan{\left(\frac{y}{x}\right)} + \frac{xe^{2y}}{x^2+y^2} \\
-    \\
     \frac{\partial f}{\partial z} &= e^z
 \end{align*}
 
@@ -97,6 +96,10 @@ This is plotted in figure \vref{plot.p3}.
     \frac{\partial}{\partial x} \left( 
       2e^{2y}\arctan{\left(\frac{y}{x}\right)} + \frac{xe^{2y}}{x^2+y^2}
     \right)
+    \\
+    &= \frac{-2ye^{2y}}{x^2+y^2} + \frac{e^{2y}(x^2+y^2)-xe^{2y}\cdot2x}{(x^2+y^2)^2}
+    = -e^{2y}\frac{2y(x^2+y^2) - (x^2+y^2) + 2x^2)}{(x^2+y^2)^2} \\
+    &= -\frac{e^{2y}}{(x^2+y^2)^2}\left( 2yx^2 + 2y^3 -x^2 - y^2 + 2x^2 \right)
 \end{align*}
 
 \oppgave{2 (iii)}
