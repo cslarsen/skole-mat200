@@ -9,7 +9,7 @@ open: all
 %.eps: %.gp data.txt
 	gnuplot $<
 
-ov1.pdf: ov1.tex preamble.tex
+ov1.pdf: ov1.tex ov1-3iii.tex preamble.tex
 
 %.pdf: %.tex
 	pdflatex $<
