@@ -185,13 +185,15 @@ I wanted to do it the other, hard way as well.
 \input{ov1-3iii}
 
 \oppgave{3 (iv)}
+First we need to find $y(x)$.
 \begin{align*}
   F(0,y) &= 1 \\
   2y\sin^2{-\frac{\pi}{4}} &= 1\\
   y &= 1 \,\text{when}\, F(0,y)=1\\
 \end{align*}
 We thus have $x=0$ and $y=1$. This gives $2u = -\frac{\pi}{2}$, $\sin{2u} =
--1$, $\cos{2u} = 0$. To find $f'(x)$,
+-1$, $\cos{2u} = 0$. To find $f'(x)$, we could have used the result in 3 (iii),
+but instead we'll do
 \begin{align*}
   f'(x) &= -\frac{\partial F / \partial x}{\partial F / \partial y}
   = -\frac{F_x}{F_y}
@@ -200,11 +202,10 @@ This is true because $F_x$ and $F_y$ are not altered by adding a constant $-1$,
 because $\frac{\partial}{\partial x}\left(-1\right) = 0$ and the same for
 $\frac{\partial}{\partial y}$. Therefore we get
 \begin{align*}
-  f'(x) &= \frac{
-      -2y(y-x)\sin{(2g)}+2\sin^2{(g)}
-    } {
-      2\sin^2{(g)}+x\sin{(2g)}(2y-2x))
-    }
+  f'(x) &= \frac{-2y(y-x)\sin{(2g)}+2\sin^2{(g)}}
+                {2\sin^2{(g)}+x\sin{(2g)}(2y-2x)}
+      = -\frac{y(y-x)\sin{2u} - \sin^2{u}}
+              {x(y-x)\sin{2u} + \sin^2{u}}
 \end{align*}
 Inserting $x=0$, we get
 \begin{align*}
