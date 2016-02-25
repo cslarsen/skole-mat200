@@ -27,6 +27,17 @@ def L(x, y, x0, y0):
     """Linear approximation of P3.F(x,y) from a chosen point x0, y0"""
     return P3.F(x0,y0) + P3.F_x(x0,y0)*(x-x0) + P3.F_y(x0,y0)*(y-y0)
 
+def y1(x,y):
+    u = x*y-math.pi/4
+    return ((-2*y**2*math.sin(2*u)+2*x*y*math.sin(2*y)+math.cos(2*u))
+            /(2*x**2*math.sin(2*u)+2*x*y*math.sin(2*u)+math.cos(2*u)))
+
+def y2(x,y):
+    g = x*y-math.pi/4
+    return ((-2*y*(y-x)*math.sin(2*g)+2*math.sin(g)**2)
+            /(2*math.sin(g)**2 + x*math.sin(2*g)*(2*y-2*x)))
+
+
 if __name__ == "__main__":
     answer = P3.F(-1.05, 0.02)
     x0, y0 = -1, 0
