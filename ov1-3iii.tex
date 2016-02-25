@@ -3,7 +3,18 @@ First we need some helper expressions:
   u &= xy-\frac{\pi}{4} \label{eq.u}\\
   \sin^2{u} &= \frac{1-\cos{2u}}{2}
       \iff \cos{2u} = 1 - 2\sin^2{u} \label{eq.cos2u} \\
+  2\sin{u}\cos{u} &= \sin{2u} \\
+  u' &= xy' + y \\
+  \sin^2{u}' &= 2\sin{u}\cos{u}\cdot u' = \sin{2u}(xy'+y) =
+      xy'\sin{2u}+y\sin{2u}
 \end{align}
 We now simplify $F(x,y)-1 = 0$,
 \begin{align*}
+  2(y-x)\left(\frac{1-\cos{2u}}{2}\right) &= 1 \\
+  (y-x)(1-\cos{2u}) &= 1
+\end{align*}
+Multiplying out
+\begin{align*}
+  (y-x)(1-\cos{2u}) &= 1 \\
+  y - y\cos{2u} -x + x\cos{2u} &= 1
 \end{align*}
