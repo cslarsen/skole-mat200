@@ -178,24 +178,16 @@ equation from the previous problem directly. At $(-1,0)$, it is
 The two methods are exactly the same.
 
 \oppgave{3 (iii)}
-We'll be using $\sin^2{u} = \frac{1-\cos{2u}}{2}$ with $u=xy-\frac{\pi}{4}$ and
-$(2u)' = 2(y+xy')$.
+We could use simply use
 \begin{align*}
-  2(y-x)\sin^2{(xy-\frac{\pi}{4})} &= 1 \\
-  2(y-x)\frac{1-\cos{2u}}{2} &= 1 \\
-  (y-x)(1-\cos{2u}) &= 1 \\
+  f'(x) &= -\frac{\partial F / \partial x}{\partial F / \partial y}
+    = -\frac{F_x}{F_y}
 \end{align*}
-Differentiating both sides
-\begin{align*}
-  (y'-1)(1-\cos{2u}) + 2(y-x)(y+xy')\sin{2u} &= 0 \\
-  y'\cos{2u} + 2(y-x)(y+xy')\sin{2u} &= \cos{2u} \\
-  y'\cos{2u} + (y^2+xyy'-xy-x^2y')2\sin{2u} &= \cos{2u} \\
-  y'\cos{2u} + 2y'(xy+x^2)\sin{2u}+2(y^2-xy)\sin{2u} &= \cos{2u} \\
-  y'\cos{2u} + 2y'(xy+x^2)\sin{2u} &= \cos{2u}-2y^2\sin{2u}+2xy\sin{2u} \\
-  y'(\cos{2u} + 2(xy+x^2)\sin{2u}) &= \cos{2u}-2y^2\sin{2u}+2xy\sin{2u} \\
-  y' &= \frac{ -2y^2\sin{2u} + 2xy\sin{2u} + \cos{2u} }
-             {  2x^2\sin{2u} + 2xy\sin{2u} + \cos{2u} } \\
-\end{align*}
+and be done with it. This is what we actually do in problem 3 (iv) below. However, I
+originally did this the needlessly hard way. And it was nearly right, with only
+a few mistakes. So I corrected it, and present it here. I will transform it to
+look like $f'(x)$ in 3 (iv).
+\input{ov1-3iii}
 
 \oppgave{3 (iv)}
 \begin{align*}
