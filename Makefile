@@ -16,4 +16,4 @@ ov1.pdf: ov1.tex preamble.tex
 	pdflatex $<
 
 clean:
-	rm -f $(TARGETS) $(TARGETS:.pdf=.aux) $(TARGETS:.pdf=.log)
+	rm -f $(TARGETS) $(TARGETS:.pdf=.aux) $(TARGETS:.pdf=.log) $(TARGETS:.pdf=.out)
