@@ -204,10 +204,28 @@ Differentiating both sides
   y &= 1 \,\text{when}\, F(0,y)=1\\
 \end{align*}
 We thus have $x=0$ and $y=1$. This gives $2u = -\frac{\pi}{2}$, $\sin{2u} =
--1$, $\cos{2u} = 0$ and, inserting all of that into the equation in the
-previous problem,
+-1$, $\cos{2u} = 0$. To find $f'(x)$,
 \begin{align*}
-  y'(0) &= -1
+  f'(x) &= -\frac{\partial F / \partial x}{\partial F / \partial y}
+  = -\frac{F_x}{F_y}
+\end{align*}
+This is true because $F_x$ and $F_y$ are not altered by adding a constant $-1$,
+because $\frac{\partial}{\partial x}\left(-1\right) = 0$ and the same for
+$\frac{\partial}{\partial y}$. Therefore we get
+\begin{align*}
+  f'(x) &= \frac{
+        2f(x)(f(x)-x)\sin{2g}-2\sin^2{g}
+    } {
+        2\sin^2{g}-x\sin{2g}(2f(x)-2x))
+    }
+\end{align*}
+Inserting $x=0$, we get
+\begin{align*}
+  f'(0) &= \frac{2f(0)^2\cdot-1 - 1}{\frac{1}{2}-0} \\
+\end{align*}
+But we already found that $y=1$ for $F(0,y)=1$, or $f(0)=1$, so
+\begin{align*}
+  f'(0) &= \frac{-3}{\frac{1}{2}} = 6
 \end{align*}
 
 \begin{figure}[h]
