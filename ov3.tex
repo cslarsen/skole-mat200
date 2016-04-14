@@ -1,0 +1,396 @@
+\documentclass[a4paper,norsk,12pt]{article}
+\input{preamble}
+
+\title{MAT200 --- Mathematical Methods 2}
+\subtitle{Compulsory Assignment 3}
+\author{Christian Stigen}
+\date{UiS, 15.~april, 2016}
+
+\begin{document}
+\maketitle
+
+\oppgave{1 (i)}
+By Gauss-Jordan elimination,
+\begin{align*}
+    \left[
+      \begin{array}{rrr|r}
+        1 & 1 & 1 & 2 \\
+        2 & 3 & 4 & 4 \\
+        4 & 3 & 1 & 9
+      \end{array}
+    \right]
+    & \rightarrow
+    \left[
+      \begin{array}{rrr|r}
+         1 &  1 &  1 &  2 \\
+         0 &  1 &  2 &  0 \\
+         0 & -1 & -3 &  1 \\
+      \end{array}
+    \right]
+    \rightarrow
+    \left[
+      \begin{array}{rrr|r}
+         1 &  0 & -1 &  2 \\
+         0 &  1 &  2 &  0 \\
+         0 &  0 & -1 &  1 \\
+      \end{array}
+    \right]
+    \\
+    & \rightarrow
+    \left[
+      \begin{array}{rrr|r}
+         1 &  0 & -1 &  2 \\
+         0 &  1 &  2 &  0 \\
+         0 &  0 &  1 & -1 \\
+      \end{array}
+    \right]
+    \rightarrow
+    \left[
+      \begin{array}{rrr|r}
+         1 &  0 &  0 &  1 \\
+         0 &  1 &  0 &  2 \\
+         0 &  0 &  1 & -1 \\
+      \end{array}
+    \right]
+\end{align*}
+giving the solution $x=1$, $y=2$ and $z=-1$.
+
+\oppgave{1 (ii)}
+\begin{align*}
+    \left[
+      \begin{array}{rrr|r}
+        1 &  1 &  1 &  3 \\
+        1 &  3 &  5 &  9 \\
+        3 &  1 & -1 &  3
+      \end{array}
+    \right]
+    \rightarrow
+    \left[
+      \begin{array}{rrr|r}
+        1 &  1 &  1 &  3 \\
+        0 &  2 &  4 &  6 \\
+        0 & -2 & -4 & -6
+      \end{array}
+    \right]
+    \rightarrow
+    \left[
+      \begin{array}{rrr|r}
+        1 &  0 & -1 &  0 \\
+        0 &  1 &  2 &  3 \\
+        0 &  0 &  0 &  0
+      \end{array}
+    \right]
+\end{align*}
+We can't go further, but we see from the first row that $x=z$, and by the
+second that $y+2z=3$ or $y=3-2z$. Thus either $z$ or $x$ can be freely chosen.
+
+\oppgave{1 (iii)}
+\begin{align*}
+    \left[
+      \begin{array}{rrrr|r}
+        1 & -1 &  1 & -1 &  1 \\
+        1 &  1 & -1 & -1 &  2 \\
+        1 &  0 &  0 & -1 &  4
+      \end{array}
+    \right]
+    & \rightarrow
+    \left[
+      \begin{array}{rrrr|r}
+        1 & -1 &  1 & -1 &  1 \\
+        0 &  2 & -2 &  0 &  1 \\
+        0 &  1 & -1 &  0 &  3
+      \end{array}
+    \right]
+    & \rightarrow
+    \left[
+      \begin{array}{rrrr|r}
+        1 & -1 &  1 & -1 &  1 \\
+        0 &  1 & -1 &  0 &  3 \\
+        0 &  2 & -2 &  0 &  1
+      \end{array}
+    \right]
+    \\
+    & \rightarrow
+    \left[
+      \begin{array}{rrrr|r}
+        1 &  0 &  0 & -1 &  4 \\
+        0 &  1 & -1 &  0 &  3 \\
+        0 &  0 &  0 &  0 & -5
+      \end{array}
+    \right]
+\end{align*}
+The last row gives $0=-5$, meaning \textit{the system is inconsistent}.
+
+\oppgave{2}
+\begin{align*}
+  A &=
+  \left[
+    \begin{array}{rrr}
+      1 &  5 &  0 \\
+      0 & -6 &  a \\
+      1 &  a &  1
+    \end{array}
+  \right]
+\end{align*}
+We'll start by looking at $\det{(A)}= 0$,
+\begin{align*}
+  \det{(A)} = (-6-a^2) +5a &= -a^2+5a-6 \\
+  -a^2+5a-6 &= 0 \\
+   a^2-5a+6 &= 0 \\
+  a & \in \{2, 3\}
+\end{align*}
+The system has unique solutions for $a \notin \{2, 3\}$. But we're after infinite
+solutions, so let's look at $a=2$.
+\begin{align*}
+      x + 5y &= 6 \\
+    -6y + 2z &= p \\
+  x + 2y + z &= p + 4
+\end{align*}
+Using Gauss-Jordan,
+\begin{align*}
+  \left[
+    \begin{array}{rrr|r}
+      1 &  5 &  0 & 6 \\
+      0 & -6 &  2 & p \\
+      1 &  2 &  1 & p+4
+    \end{array}
+  \right]
+  & \rightarrow
+  \left[
+    \begin{array}{rrr|r}
+      1 &  5 &  0 & 6 \\
+      1 &  2 &  1 & p+4 \\
+      0 & -6 &  2 & p
+    \end{array}
+  \right]
+  & \rightarrow
+  \left[
+    \begin{array}{rrr|r}
+      1 &  5 &  0 & 6 \\
+      0 & -3 &  1 & p-2 \\
+      0 & -6 &  2 & p
+    \end{array}
+  \right]
+  \\
+  \rightarrow
+  \left[
+    \begin{array}{rrr|r}
+      1 &  0 &  5/3 & 6+\frac{5(p-2)}{3} \\
+      0 & -3 &  1 & p-2 \\
+      0 &  0 &  4 & 3p-4
+    \end{array}
+  \right]
+\end{align*}
+\textit{Not completed.}
+
+\oppgave{3 (i)}
+\begin{align*}
+  \left[
+    \begin{array}{ccc}
+      1 & 0 & 0 \\
+      1 & 1 & 1 \\
+      0 & 2 & 1
+    \end{array}
+  \right]
+  \left[
+    \begin{array}{ccc}
+      1 & 3 \\
+      2 & 4 \\
+      1 & 5
+    \end{array}
+  \right]
+  &=
+  \left[
+    \begin{array}{ccc}
+      1 & 3 \\
+      4 & 12 \\
+      5 & 13
+    \end{array}
+  \right]
+\end{align*}
+
+\oppgave{3 (ii)}
+\begin{align*}
+  \left[
+    \begin{array}{ccc}
+      1 &  2 \\
+      1 &  3 \\
+      3 & -1
+    \end{array}
+  \right]
+  \left[
+    \begin{array}{ccc}
+      1 & 0 \\
+     -1 & 2
+    \end{array}
+  \right]
+  &=
+  \left[
+    \begin{array}{ccc}
+     -1 & 4 \\
+     -2 & 6 \\
+      4 & -2
+    \end{array}
+  \right]
+\end{align*}
+
+\oppgave{3 (iii)}
+\begin{align*}
+  \left[
+    \begin{array}{ccc}
+     -1 &  1 \\
+      3 & -1
+    \end{array}
+  \right]
+  \left[
+    \begin{array}{ccc}
+      1 & 2 & 3 \\
+      4 & 5 & 6
+    \end{array}
+  \right]
+  &=
+  \left[
+    \begin{array}{ccc}
+      3 & 3 & 3 \\
+      -1 & 1 & 3
+    \end{array}
+  \right]
+\end{align*}
+
+\oppgave{4 (i)}
+\begin{align*}
+  \left|
+    \begin{array}{ccc}
+      1 & 0 & 0 \\
+      1 & 2 & 0 \\
+      1 & 2 & 3 \\
+    \end{array}
+  \right|
+  &= 1\cdot(6-0) - 0 + 0 = 6
+\end{align*}
+
+\oppgave{4 (ii)}
+\begin{align*}
+  \left|
+    \begin{array}{ccc}
+      1 & 2 & 3 \\
+      2 & 1 & 3 \\
+      1 & 4 & 5 \\
+    \end{array}
+  \right|
+  &= 1\cdot-7 -2\cdot7 + 3\cdot-7
+  = (-3+3)\cdot7=0
+\end{align*}
+
+\oppgave{4 (iii)}
+\begin{align*}
+  \left|
+    \begin{array}{ccc}
+      0 & 1 & 0 \\
+      1 & 0 & 1 \\
+      0 & 1 & 0 \\
+    \end{array}
+  \right|
+  &= 0-1\cdot0-0=0
+\end{align*}
+
+\oppgave{4 (iv)}
+\begin{align*}
+  \left|
+    \begin{array}{ccc}
+      0 & 1 & 2 \\
+      1 & 0 & 1 \\
+      2 & 1 & 0 \\
+    \end{array}
+  \right|
+  &= 0 -1\cdot-2 +2\cdot1 = 4
+\end{align*}
+
+\oppgave{4 (v)}
+\begin{align*}
+  \left|
+    \begin{array}{cccc}
+      1 & 3 & 6 & 1 \\
+      0 & 4 & 5 & 0 \\
+      0 & 5 & 4 & 0 \\
+      2 & 6 & 3 & 1
+    \end{array}
+  \right|
+  &=
+  1\left|
+    \begin{array}{ccc}
+      4 & 5 & 0 \\
+      5 & 4 & 0 \\
+      6 & 3 & 1
+    \end{array}
+  \right|
+  + 0 + 0 - 2
+  \left|
+    \begin{array}{ccc}
+      3 & 6 & 1 \\
+      4 & 5 & 0 \\
+      5 & 4 & 0
+    \end{array}
+  \right|
+  \\
+  &=
+  (4\cdot4 -5\cdot5) - 2\cdot(3\cdot5-6\cdot0+1(16-25))
+  = 9
+\end{align*}
+
+\oppgave{5 (i)}
+We construct a matrix $A$ and know that if $\det{(A)} \ne 0$, the given vectors
+are linearly independent.
+\begin{align*}
+  A &=
+  \left[
+    \begin{array}{ccc}
+      0 & 1 & 1 \\
+      1 & 0 & 2 \\
+      0 & 1 & 3
+    \end{array}
+  \right] \\
+  \det{(A)} &= 0 -3 + 1 = -2
+\end{align*}
+As the determinant $\ne 0$, the vectors are linearly independent.
+
+\oppgave{5 (ii)}
+\begin{align*}
+  \left|
+    \begin{array}{ccc}
+      1 & 3 & 2 \\
+      2 & 2 & 2 \\
+      3 & 1 & 2
+    \end{array}
+  \right|
+  &= 2+6-8 = 0
+\end{align*}
+The vectors are linearly independent.
+
+\oppgave{5 (iii)}
+\begin{align*}
+  \left|
+    \begin{array}{ccc}
+      1 & 2 \\
+      3 & 7
+    \end{array}
+  \right|
+  &= 7-6 = 1
+\end{align*}
+Thus, $u_1$ and $u_2$ are linearly independent.
+\begin{align*}
+  \left|
+    \begin{array}{ccc}
+      2 & 15 \\
+      7 & 9
+    \end{array}
+  \right|
+  &= 18-7\cdot15 \ne 0
+\end{align*}
+Thus, $u_2$ and $u_3$ are also linearly independent. That means all vectors are
+linearly independent, by transitivity.
+
+\oppgave{5 (iv)}
+\textit{Not completed.}
+
+\end{document}
