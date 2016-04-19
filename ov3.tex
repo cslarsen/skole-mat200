@@ -4,7 +4,7 @@
 \title{MAT200 --- Mathematical Methods 2}
 \subtitle{Compulsory Assignment 3}
 \author{Christian Stigen}
-\date{UiS, 15.~april, 2016}
+\date{UiS, 19.~april, 2016}
 
 \begin{document}
 \maketitle
@@ -433,18 +433,38 @@ Gauss-Jordan,
        a & 2b &  0 & 0 \\
        0 &-6b & 6c & 0 \\
        0 &  0 &  0 & 0 \\
-       0 &-3b & 9c & 0
+       0 &-9b & 9c & 0
     \end{array}
   \right] \rightarrow
   \left[
     \begin{array}{ccc|c}
-       a &  0 & 3c & 0 \\
+       a & 2b &  0 & 0 \\
        0 &-6b & 6c & 0 \\
-       0 &  0 &12c & 0 \\
+       0 &-9b & 9c & 0 \\
        0 &  0 &  0 & 0
+    \end{array}
+  \right] 
+  \rightarrow
+  \\
+  \left[
+    \begin{array}{ccc|c}
+       a &  2b &  0 & 0 \\
+       0 &-18b & 18c & 0 \\
+       0 &-18b & 18c & 0 \\
+       0 &   0 &  0 & 0
+    \end{array}
+  \right]
+  \rightarrow
+  \left[
+    \begin{array}{ccc|c}
+       a &  2b &  0 & 0 \\
+       0 &   0 &  0 & 0 \\
+       0 &   0 &  0 & 0 \\
+       0 &   0 &  0 & 0
     \end{array}
   \right]
 \end{align*}
-or $c=b=a=0$, i.e.~$\vec{u}_1$, $\vec{u}_2$ and $\vec{u}_3$ are \textit{linearly independent}.
+We now have $a=-2b$, or $b=-a/2$ inserting into $-b+c=0$ gives $c=-a/2$ as
+well. Thus, the vectors cannot be linearly independent.
 
 \end{document}
